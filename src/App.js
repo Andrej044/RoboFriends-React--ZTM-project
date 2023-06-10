@@ -3,12 +3,14 @@ import RobotsList from "./RobotsListComponent";
 import SearchBox from './SearchBox'
 import {robots} from './robots'
 
-const state = {
-  robots: robots,
-  searchfield: '',
-}
-
 export default class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      robots: robots,
+      searchfield: '',
+    }
+  }
   render() {
     return(
       <div className="tc">
