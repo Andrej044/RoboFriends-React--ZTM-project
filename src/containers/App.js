@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import RobotsList from "./RobotsListComponent";
-import SearchBox from './SearchBox'
-import Scroll from "./Scroll";
+import RobotsList from "../components/RobotsListComponent";
+import SearchBox from '../components/SearchBox'
+import Scroll from "../components/Scroll";
 import "./App.css"
 
 export default class App extends Component {
