@@ -1,9 +1,11 @@
 import React from "react";
 
 
-const Scroll = () =>{
+const Scroll = (props) =>{
   return(
-    <h1>Hi</h1>
+    <div className="overflowComponent">
+      {props.children}
+    </div>
   )
 }
 
