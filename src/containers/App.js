@@ -23,17 +23,22 @@ export default class App extends Component {
     this.setState({searchfield: event.target.value});
   }
   render() {
-    const filteredList = this.state.robots.filter(robot => {
-        return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    const {robots, searchfield} = this.state;
+    const filteredList = robots.filter(robot => {
+        return robot.name.toLowerCase().includes(searchfield.toLowerCase())
       }) 
 
-      return this.state.robots.length > 0 ? <div className="tc">
-        <h1>RoboFriends</h1>
-        <SearchBox searchChange = {this.onSearchChange} />
-        <Scroll>
-          <RobotsList  robots = {filteredList} />
-        </Scroll>
-      </div> : <h1>Loading...</h1>
+      return !robots.length ?
+        <h1>Loading...</h1> :
+        (
+        <div className="tc">
+          <h1>RoboFriends</h1>
+          <SearchBox searchChange = {this.onSearchChange} />
+          <Scroll>
+            <RobotsList  robots = {filteredList} />
+          </Scroll>
+        </div>
+        ) 
 
   }
 }
