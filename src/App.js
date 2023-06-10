@@ -25,12 +25,12 @@ export default class App extends Component {
     const filteredList = this.state.robots.filter(robot => {
         return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
       }) 
-    return(
-      <div className="tc">
+
+      return this.state.robots.length > 0 ? <div className="tc">
         <h1>RoboFriends</h1>
         <SearchBox searchChange = {this.onSearchChange} />
         <RobotsList  robots = {filteredList} />
-      </div>
-    )
+      </div> : <h1>Loading...</h1>
+
   }
 }
