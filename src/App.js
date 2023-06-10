@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RobotsList from "./RobotsListComponent";
 import SearchBox from './SearchBox'
 import {robots} from './robots'
+import "./App.css"
 
 export default class App extends Component {
   constructor(){
