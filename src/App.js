@@ -11,11 +11,14 @@ export default class App extends Component {
       searchfield: '',
     }
   }
+  onSearchChange(e){
+    console.log(e)
+  }
   render() {
     return(
       <div className="tc">
         <h1>RoboFriends</h1>
-        <SearchBox />
+        <SearchBox searchChange = {this.onSearchChange} />
         <RobotsList  robots = {robots} />
       </div>
     )
