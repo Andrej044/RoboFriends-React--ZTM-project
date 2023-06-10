@@ -1,9 +1,14 @@
 import React from "react";
 import RobotsList from "./RobotsListComponent";
+import SearchBox from './SearchBox'
 
 const App = ({robots})=> {
   return(
-    <RobotsList  robots = {robots} />
+    <>
+      <h1>RoboFriends</h1>
+      <SearchBox />
+      <RobotsList  robots = {robots} />
+    </>
   )
 }
 
