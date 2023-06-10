@@ -14,6 +14,7 @@ const robotsList = robots.map(robot => {
           name = {robot.name}
           username = {robot.username}
           email = {robot.email}
+          key={robot.id}
     />  
   )
 })
