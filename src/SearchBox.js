@@ -1,11 +1,11 @@
 import React from "react";
 
 
-const searchBox = () => {
+const SearchBox = () => {
   return(
-     <h2>"SearchBox component"</h2>
+      <input type="search" placeholder="search robots" />
     )
 }
 
 
-export default searchBox;
+export default SearchBox;
