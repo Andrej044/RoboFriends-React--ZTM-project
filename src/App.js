@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RobotsList from "./RobotsListComponent";
 import SearchBox from './SearchBox'
+import Scroll from "./Scroll";
 import "./App.css"
 
 export default class App extends Component {
@@ -29,7 +30,9 @@ export default class App extends Component {
       return this.state.robots.length > 0 ? <div className="tc">
         <h1>RoboFriends</h1>
         <SearchBox searchChange = {this.onSearchChange} />
-        <RobotsList  robots = {filteredList} />
+        <Scroll>
+          <RobotsList  robots = {filteredList} />
+        </Scroll>
       </div> : <h1>Loading...</h1>
 
   }
