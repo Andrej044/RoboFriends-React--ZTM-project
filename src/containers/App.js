@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RobotsList from "../components/RobotsListComponent";
 import SearchBox from '../components/SearchBox'
 import Scroll from "../components/Scroll";
+import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css"
 
 export default class App extends Component {
@@ -35,7 +36,9 @@ export default class App extends Component {
           <h1>RoboFriends</h1>
           <SearchBox searchChange = {this.onSearchChange} />
           <Scroll>
-            <RobotsList  robots = {filteredList} />
+            <ErrorBoundry>
+              <RobotsList  robots = {filteredList} />
+            </ErrorBoundry>
           </Scroll>
         </div>
         ) 
