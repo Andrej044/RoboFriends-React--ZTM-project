@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RoboFriends-React--ZTM-project/static/css/main.8eceb8ec.css",
+    "main.js": "/RoboFriends-React--ZTM-project/static/js/main.4861e510.js",
+    "static/js/787.32032a02.chunk.js": "/RoboFriends-React--ZTM-project/static/js/787.32032a02.chunk.js",
+    "static/media/SEGA.woff": "/RoboFriends-React--ZTM-project/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
+    "index.html": "/RoboFriends-React--ZTM-project/index.html",
+    "main.8eceb8ec.css.map": "/RoboFriends-React--ZTM-project/static/css/main.8eceb8ec.css.map",
+    "main.4861e510.js.map": "/RoboFriends-React--ZTM-project/static/js/main.4861e510.js.map",
+    "787.32032a02.chunk.js.map": "/RoboFriends-React--ZTM-project/static/js/787.32032a02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8eceb8ec.css",
+    "static/js/main.4861e510.js"
+  ]
+}
