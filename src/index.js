@@ -8,7 +8,8 @@ import 'tachyons';
 import App from './containers/App'
 import { searchRobots } from './reducers';
 
-const store = configureStore(searchRobots)
+const store = configureStore({
+  reducer: searchRobots})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
