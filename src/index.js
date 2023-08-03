@@ -8,13 +8,13 @@ import 'tachyons';
 import App from './containers/App'
 import { searchRobots } from './reducers';
 
-
+const store = configureStore(searchRobots)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <App/>
+    <App store= {store}/>
   </React.StrictMode>
 );
 
