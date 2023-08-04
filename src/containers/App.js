@@ -12,6 +12,11 @@ const mapStateToProps = (state) => {
     searchField:state.searchRobots.searchField
   }
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+  }
+}
 
 const  App = (props) => {
     const [robots, setRobots] = useState([]);
