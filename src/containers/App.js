@@ -39,4 +39,4 @@ const  App = (props) => {
         )
   };
 
-  export default App;
+  export default connect()(App);
