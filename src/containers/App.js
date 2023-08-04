@@ -1,4 +1,5 @@
 import  {useState, useEffect} from "react";
+import { connect } from "react-redux";
 import RobotsList from "../components/RobotsListComponent";
 import SearchBox from '../components/SearchBox'
 import Scroll from "../components/Scroll";
