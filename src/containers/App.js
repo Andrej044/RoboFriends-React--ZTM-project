@@ -7,6 +7,12 @@ import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css"
 import { setSearchField } from "../actions";
 
+const mapStateToProps = (state) => {
+  return {
+    searchField:state.searchRobots.searchField
+  }
+}
+
 const  App = (props) => {
     const [robots, setRobots] = useState([]);
     const [searchfield, setSearchfield] = useState('');
@@ -39,4 +45,4 @@ const  App = (props) => {
         )
   };
 
-  export default connect()(App);
+  export default connect(mapStateToProps, mapDispatchToProps)(App);
