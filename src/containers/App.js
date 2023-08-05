@@ -9,7 +9,7 @@ import { setSearchField } from "../actions";
 
 const mapStateToProps = (state) => {
   return {
-    searchField:state.searchRobots.searchField
+    searchField:state.searchField
   }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -20,19 +20,21 @@ const mapDispatchToProps = (dispatch) => {
 
 const  App = (props) => {
     const [robots, setRobots] = useState([]);
-    const [searchfield, setSearchfield] = useState('');
+    // const [searchfield, setSearchfield] = useState('');
   useEffect(()=>{
       fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
         .then(users => setRobots(users))
   }, [])
 
-  const onSearchChange = (event) => {
-    setSearchfield(event.target.value);
-  }
+  // const onSearchChange = (event) => {
+  //   setSearchfield(event.target.value);
+  // }
+
+    const {searchField, onSearchChange} = props;
 
     const filteredList = robots.filter(robot => {
-        return robot.name.toLowerCase().includes(searchfield.toLowerCase())
+        return robot.name.toLowerCase().includes(searchField.toLowerCase())
       }) 
 
       return !robots.length ?
