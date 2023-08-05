@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import { configureStore} from '@reduxjs/toolkit';
 import {createLogger} from 'redux-logger';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -9,9 +9,12 @@ import 'tachyons';
 import App from './containers/App'
 import { searchRobots } from './reducers';
 
+const logger = createLogger();
 const store = configureStore({
-  reducer: searchRobots})
-
+  reducer: searchRobots,
+  middleware: (applyMiddleware) => applyMiddleware().concat(logger)
+})
+  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
