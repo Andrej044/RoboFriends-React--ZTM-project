@@ -1,4 +1,4 @@
-import  {useState, useEffect} from "react";
+import  {useEffect} from "react";
 import { connect } from "react-redux";
 import RobotsList from "../components/RobotsListComponent";
 import SearchBox from '../components/SearchBox'
@@ -23,14 +23,10 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const  App = (props) => {
-    // const [robots, setRobots] = useState([]);
-    
+  const {onRequestRobots} = props
   useEffect(()=>{
-      // fetch("https://jsonplaceholder.typicode.com/users")
-      //   .then(response => response.json())
-      //   .then(users => setRobots(users))
-      props.onRequestRobots();
-  }, [])
+      onRequestRobots();
+  }, [onRequestRobots])
 
     const {searchField, onSearchChange, robots, isPending} = props;
 
