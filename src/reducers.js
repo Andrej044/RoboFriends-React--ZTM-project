@@ -20,7 +20,13 @@ export const  searchRobots = (state=initialStateSearch, action={}) => {
     }
 }
 
-export const requestRobots = (state=initialState, action={}) => {
+const initialStateRequest = {
+isPending: false,
+robots: [],
+error:''
+}
+
+export const requestRobots = (state=initialStateRequest, action={}) => {
   switch(action.type){
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, {isPending:true});
