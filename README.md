@@ -6,4 +6,4 @@
   - React.js
   - Redux
   - Tachyons
-  - [Robohash API] (https://robohash.org/)
+  - [Robohash API](https://robohash.org/)
